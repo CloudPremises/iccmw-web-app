@@ -22,7 +22,6 @@ const index = () => {
                 <Image src={imageUrl} alt={logo.title} width={120} height={120} />
               </div>
               <span className="ml-2 text-white text-xl font-bold">{logo.title}</span>
-              <p className="ml-2 pt-4 text-white text-sm font-thin">{logo.description}</p>
 
               {/* <div className='flex flex-col gap-0 ml-2'>
            <span className='text-xl'>Islamic Community Center</span>
@@ -35,6 +34,13 @@ const index = () => {
 
             </div>
           </Link>
+          <div>
+            <div className="text-lg flex flex-col items-start sm:w-80 lg:w-96 ">
+
+              <p className="ml-2 pt-4 text-white text-sm font-thin">{logo.description}</p>
+            </div>
+
+          </div>
 
         </div>
 

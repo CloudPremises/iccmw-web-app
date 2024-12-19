@@ -14,7 +14,7 @@
 }
 
 :root {
-  --background: #fdfdfb;
+  --background: #ffffff;
   --foreground: #171717;
 
   --white-color: #ffffff;
@@ -23,7 +23,8 @@
   /* Customized Colors */
   --primary-color: #ffc265;
   /* --secondary-color: #1da599; */
-  --secondary-color: #35d338;
+  /* --secondary-color: #35d338; */
+  --secondary-color: #40c463;
   --tertiary-color: #212830;
   --quaternary-color: #e7f3f0;
   --quinary-color: #f59e0b;

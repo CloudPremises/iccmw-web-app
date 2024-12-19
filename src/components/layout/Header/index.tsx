@@ -6,7 +6,7 @@ import imageUrl from '@/../public/assets/images/app/iccmwLogo.png';
 import Link from 'next/link';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { IoClose } from "react-icons/io5";
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import TopBar from '../TopBar';
 
 
@@ -15,13 +15,11 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasShadow, setHasShadow] = useState(false);
   const pathName = usePathname();
-
-  console.log('pathName');
-  console.log(pathName);
+  const router = useRouter();
 
 
   useEffect(() => {
-    // 
+
     const handleResize = () => {
       if (window.innerWidth >= 768) {
         setIsMenuOpen(false);
@@ -42,6 +40,7 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
 
 
 
@@ -104,7 +103,7 @@ const Header = () => {
                     <Link
                       href={`${item.route.toLowerCase().replace(/\s+/g, '-')}`}
                       className={`text-lg font-semibold transition duration-300 capitalize 
-                   ${isActive ? 'text-green-500 font-bold' : 'text-gray-500 hover:text-green-500 hover:font-bold'}`}
+                   ${isActive ? 'text-color-secondary font-bold' : 'text-gray-500 hover:text-color-secondary hover:font-bold'}`}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item['title']}
@@ -126,11 +125,13 @@ const Header = () => {
           ))} */}
 
           {button.length > 0 && (
-            <button className="text-lg font-semibold text-white bg-green-500 px-6 py-1 h-12 rounded-lg capitalize ">
+            <button
+              className="text-lg font-semibold text-white bg-color-secondary px-6 py-1 h-12 rounded-lg capitalize transition-all duration-300 ease-in-out hover:py-2 hover:px-8"
+              onClick={() => router.push(`/${button[0].link}`)}
+            >
               {button[0].title}
             </button>
           )}
-
           {/* 
           {button.length > 0 && (
             <button className="text-lg font-semibold text-black bg-yellow-500 px-6 py-1 h-12 rounded-lg capitalize">
