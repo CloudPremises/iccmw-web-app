@@ -2,15 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* user select */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 :root {
-  --background: #ffffff;
+  --background: #fdfdfb;
   --foreground: #171717;
+
+  --white-color: #ffffff;
+  --black-color: #171717;
+
+  /* Customized Colors */
+  --primary-color: #ffc265;
+  /* --secondary-color: #1da599; */
+  --secondary-color: #35d338;
+  --tertiary-color: #212830;
+  --quaternary-color: #e7f3f0;
+  --quinary-color: #f59e0b;
+  --senary-color: #0ea5e9;
+  --septenary-color: #9333ea;
+  --octonary-color: #f43f5e;
+  --nonary-color: #6366f1;
+  --denary-color: #8b5cf6;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #fdfdfb;
+    --foreground: #171717;
+
+    --white-color: #ffffff;
+    --black-color: #171717;
+
+    /* Customized Colors */
+    --primary-color: #ffc265;
+    --secondary-color: #1da599;
+    --tertiary-color: #212830;
+    --quaternary-color: #e7f3f0;
+    --quinary-color: #f8f6ed;
+    --senary-color: #0ea5e9;
+    --septenary-color: #9333ea;
+    --octonary-color: #f43f5e;
+    --nonary-color: #6366f1;
+    --denary-color: #8b5cf6;
   }
 }
 

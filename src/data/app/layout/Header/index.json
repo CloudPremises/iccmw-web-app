@@ -1,0 +1,34 @@
+{
+  "logo": {
+    "title": "Islamic Community Center of Mid-Westchester",
+    "url": "@/../public/assets/images/app/iccmwLogo.png"
+  },
+  "navigation": [
+    {
+      "title": "home",
+      "route": "/"
+    },
+    {
+      "title": "about us",
+      "route": "/aboutus"
+    },
+    {
+      "title": "events",
+      "route": "/events"
+    },
+    {
+      "title": "contact us",
+      "route": "/contact"
+    }
+  ],
+  "button": [
+    {
+      "title": "donate",
+      "link": "/donate"
+    },
+    {
+      "title": "Portal",
+      "link": "/portal"
+    }
+  ]
+}

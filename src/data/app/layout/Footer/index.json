@@ -1,0 +1,35 @@
+{
+  "logo": {
+    "url": "assets/images/app/iccmwLogo.png",
+    "title": "Islamic Community Center of Mid-Westchester",
+    "description": "ICCMW is a non-profit tax-exempt organization that has been formed exclusively for educational, religious, and social purposes. It is registered with the Internal Revenue Service under revenue code 501(c)(3)."
+  },
+  "navigation": [
+    {
+      "title": "home",
+      "route": "/"
+    },
+    {
+      "title": "about us",
+      "route": "/aboutus"
+    },
+    {
+      "title": "events",
+      "route": "/events"
+    },
+    {
+      "title": "contact",
+      "route": "/contact"
+    },
+    {
+      "title": "donate ICCMW",
+      "route": "/donate"
+    }
+  ],
+  "contact": {
+    "email": "icc4mw@gmail.com",
+    "number": "+1 347-471-8869",
+    "timing": "9.00 am - 6.00 pm",
+    "address": ["2 Grandview", "Blvd Yonkers, NY 10710"]
+  }
+}
