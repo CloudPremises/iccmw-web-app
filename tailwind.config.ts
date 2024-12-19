@@ -1,6 +1,7 @@
 
 import type { Config } from "tailwindcss";
 
+
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -54,5 +55,8 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    require('@tailwindcss/typography'),
+  ],
 } satisfies Config;
