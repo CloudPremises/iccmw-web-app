@@ -6,9 +6,9 @@ import { FaDownload } from "react-icons/fa";
 const index = () => {
   return (
     <div className='max-w-screen-xl mx-auto p-4'>
-      <div className='w-full p-4 sm:flex sm:flex-col md:flex md:flex-row items-start justify-center gap-4 '>
+      <div className='w-full lg:p-4 sm:flex sm:flex-col md:flex md:flex-row items-start justify-center gap-4 '>
 
-        <div className='w-full p-4 bg-white rounded-2xl flex flex-col gap-4'>
+        <div className='w-full bg-white rounded-2xl flex flex-col gap-4'>
 
           <div className='flex justify-between items-center'>
             {/* Time Now */}
