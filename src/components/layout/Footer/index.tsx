@@ -10,7 +10,7 @@ const index = () => {
   const { logo, navigation, contact } = footerData;
 
   return (
-    <div className='bg-black p-4'>
+    <div className='bg-[#121413] p-4'>
       <div className='max-w-screen-xl mx-auto sm:flex-col lg:flex lg:flex-row lg:justify-between'>
 
         <div className='p-4 sm:flex sm:flex-col sm:items-center sm:justify-start'>

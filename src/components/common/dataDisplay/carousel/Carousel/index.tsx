@@ -1,17 +1,26 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-const Carousel: React.FC = () => {
-  const slides = [
-    { id: 1, image: 'https://iccmw.org/wp-content/uploads/2023/03/slider01.jpg' }
-  ];
+interface CarouselProps {
+  slides: string[]; // Type for the slides prop, an array of image URLs
+}
 
+const Carousel: React.FC<CarouselProps> = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [startX, setStartX] = useState<number | null>(null);
   const [dragDistance, setDragDistance] = useState<number>(0);
   const [isDragging, setIsDragging] = useState<boolean>(false);
+
+  // Auto-slide logic
+  useEffect(() => {
+    const interval = setInterval(() => {
+      goToNext();
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval); // Clean up the interval on component unmount
+  }, [currentIndex]);
 
   const handleMouseDown = (e: React.MouseEvent | React.TouchEvent) => {
     const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
@@ -48,8 +57,7 @@ const Carousel: React.FC = () => {
 
   return (
     <div
-      className={`relative w-full mx-auto overflow-hidden rounded-2xl ${isDragging ? 'cursor-grabbing' : 'cursor-grab'
-        }`}
+      className={`relative w-full mx-auto overflow-hidden rounded-2xl ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
@@ -65,11 +73,11 @@ const Carousel: React.FC = () => {
           transform: `translateX(calc(-${currentIndex * 100}% + ${dragDistance}px))`,
         }}
       >
-        {slides.map((slide) => (
-          <div key={slide.id} className="flex-shrink-0 w-full">
+        {slides.map((image, index) => (
+          <div key={index} className="flex-shrink-0 w-full px-2">
             <img
-              src={slide.image}
-              alt={`Slide ${slide.id}`}
+              src={image}
+              alt={`Slide ${index}`}
               className="block w-full h-full object-cover rounded-2xl"
               draggable={false} // Disable image dragging
             />
@@ -83,8 +91,7 @@ const Carousel: React.FC = () => {
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 rounded-full ${index === currentIndex ? 'bg-gray-800' : 'bg-gray-400'
-              }`}
+            className={`w-3 h-3 rounded-full ${index === currentIndex ? 'bg-gray-800' : 'bg-gray-400'}`}
           ></button>
         ))}
       </div>

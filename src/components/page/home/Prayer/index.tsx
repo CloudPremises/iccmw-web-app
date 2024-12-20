@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { CiLocationOn } from "react-icons/ci";
+import { FaDownload } from "react-icons/fa";
 
 const index = () => {
   return (
@@ -9,10 +10,20 @@ const index = () => {
 
         <div className='w-full p-4 bg-white rounded-2xl flex flex-col gap-4'>
 
-          {/* Time Now */}
-          <div className='flex flex-col'>
-            <h1 className='text-xl font-bold text-color-secondary'>03 Safar 1443 AH </h1>
-            <h1 className='text-xl font-bold '>Sunday, September 12, 2021 </h1>
+          <div className='flex justify-between items-center'>
+            {/* Time Now */}
+            <div className='flex flex-col'>
+              <h1 className='sm:text-lg md:text-xl font-bold text-color-secondary'>03 Safar 1443 AH </h1>
+              <h1 className='sm:text-lg md:text-xl font-bold '>Sunday, September 12, 2021 </h1>
+            </div>
+
+            <button className='flex gap-2 items-center h-fit transition-all duration-300 ease-in-out bg-black hover:bg-color-secondary text-white font-bold rounded-xl border border-primary py-2 px-3'>
+              <FaDownload size={16} />
+              <span>
+                Monthly Calender
+              </span>
+
+            </button>
           </div>
 
           <div className="w-full flex flex-col gap-4 items-center rounded-xl border border-primary p-6  " >

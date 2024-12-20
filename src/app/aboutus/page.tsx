@@ -43,6 +43,10 @@ const Page: React.FC = () => {
       {/* Page Title */}
       <SectionTitle title="about us" />
 
+      <div className='w-full flex items-center justify-center p-4'>
+        <img src="https://iccmw.org/wp-content/uploads/2023/03/slider01.jpg" className='rounded-lg' alt="iccmw" />
+      </div>
+
       <div className="w-full">
         {/* Heading Section */}
         <div className="h-auto max-w-screen-xl mx-auto p-4">
@@ -52,7 +56,7 @@ const Page: React.FC = () => {
               {
                 aboutData && (
                   <h1 className="text-green-600 text-2xl text-center">
-                      &quot; {aboutData.heading} &quot;
+                    &quot; {aboutData.heading} &quot;
                   </h1>
                 )}
 

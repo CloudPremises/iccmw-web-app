@@ -6,8 +6,8 @@ import Image from 'next/image';
 
 const index = () => {
   return (
-    <div className='flex flex-col gap-4'>
-      <Image src={IccmwLogo} alt="iccmw" />
+    <div className='flex flex-col items-center justify-center gap-4'>
+      <Image src={IccmwLogo} width={100} alt="iccmw" />
       <Loader />
     </div>
   )
