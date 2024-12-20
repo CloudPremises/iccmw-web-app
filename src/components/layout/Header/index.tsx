@@ -127,7 +127,7 @@ const Header = () => {
           {button.length > 0 && (
             <button
               className="text-lg font-semibold text-white bg-color-secondary px-6 py-1 h-12 rounded-lg capitalize transition-all duration-300 ease-in-out hover:py-2 hover:px-8"
-              onClick={() => router.push(`/${button[0].link}`)}
+              onClick={() => router.replace(`/${button[0].link}`)}
             >
               {button[0].title}
             </button>
